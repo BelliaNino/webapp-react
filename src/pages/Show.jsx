@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 function Show() {
     return (
         <>
-            <div className='container my-3' >
+        <div className='hero-products'>
+            <div className='container' >
                 <div className="card" style={{ width: "18rem" }}>
                     <img src="https://placehold.co/286x180" className="card-img-top" alt="product" />
                     <div className="card-body">
@@ -15,6 +16,7 @@ function Show() {
                     </div>
                 </div>
             </div>
+        </div>
         </>
     )
 };

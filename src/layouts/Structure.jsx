@@ -10,12 +10,10 @@ function Structure() {
       <header>
         <nav className="navbar navbar-expand-md navbar-light bg-warning px-4">
 
-          {/* Logo */}
           <Link className="navbar-brand" to="/Homepage">
             <img src={Logo} alt="Logo BB" style={{ width: '50px', borderRadius: '50px' }} />
           </Link>
 
-          {/* Hamburger */}
           <button
             className="navbar-toggler"
             type="button"
@@ -31,10 +29,7 @@ function Structure() {
           {/* Contenuto collassabile */}
           <div className="collapse navbar-collapse" id="navMenu">
 
-            {/* Spazio a sinistra per spingere tutto a destra */}
             <div className="me-auto" />
-
-            {/* Links + Ricerca affiancati a destra */}
             <div className="d-flex align-items-center gap-2">
               <Link to="/Homepage">
                 <button className="btn btn-sm btn-dark text-white">Home</button>
