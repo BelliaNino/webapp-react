@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../services/api';
 
-function ProductDetail() {
+function ProductDetailBody() {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [reviews, setReviews] = useState([]);
@@ -53,4 +53,4 @@ function ProductDetail() {
     );
 }
 
-export default ProductDetail;
+export default ProductDetailBody;
