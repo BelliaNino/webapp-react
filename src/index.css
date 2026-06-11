@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh;
 }
 
@@ -18,6 +19,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -27,6 +29,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -36,6 +39,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -48,4 +52,16 @@
 
 main {
   padding-top: 103px;
+}
+
+/*manage img*/
+.hero-section {
+  position: relative;
+}
+
+.slogan {
+  position: absolute;
+  width: 45%;
+  left: 260px;
+  transform: rotate(-5deg);
 }

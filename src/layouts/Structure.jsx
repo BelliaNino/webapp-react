@@ -3,6 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 import Logo from '../img/logo.png'
 import soloLogo from '../img/solologo.png'
+import bella from '../img/bella.png'
 
 function Structure() {
   return (
@@ -62,7 +63,7 @@ function Structure() {
 
           <a className="navbar-brand d-flex align-items-center gap-3 text-decoration-none text-dark" href="/">
             <div className="brand-text">
-              <img style={{ width: '80px', borderRadius: '50px' }} src={soloLogo} alt="Logo BB" />
+              <img style={{ width: '200px', borderRadius: '50px' }} src={bella} alt="Logo BB" />
             </div>
           </a>
 
