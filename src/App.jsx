@@ -2,7 +2,8 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Outlet
+  Outlet,
+  Navigate
 } from 'react-router-dom'
 
 import Homepage from './pages/Homepage';
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Structure/>}>
+        <Route index element={<Navigate to='/Homepage' replace />}/>
           <Route path='/Homepage' element={<Homepage/>}/>
           <Route path='/Show' element={<Show/>}/>
           <Route path='/ProductDetail' element={<ProductDetail/>}/>
