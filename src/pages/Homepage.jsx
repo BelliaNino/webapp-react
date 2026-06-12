@@ -14,6 +14,7 @@ function Homepage() {
                 <img className='slogan' src={slogan} alt="" style={{ width: '35%', top: '-30px' }} />
             </div>
             <div className="featured-section">
+                <h2 className="text-center mb-4 text-white">Gelati in Evidenza</h2>
                 {/* Sezione Card Featured */}
                 <div className="row justify-content-center g-3 align-items-stretch">
                     {featuredItems.slice(0, 5).map((product) => (
