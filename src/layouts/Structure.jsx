@@ -3,6 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 import Logo from '../img/logo.png'
 import soloLogo from '../img/solologo.png'
+import bella from '../img/bella.png'
 
 function Structure() {
   return (
@@ -11,7 +12,7 @@ function Structure() {
         <nav className="navbar navbar-expand-md navbar-light bg-warning px-4">
 
           <Link className="navbar-brand" to="/Homepage">
-            <img src={Logo} alt="Logo BB" style={{ width: '80px', borderRadius: '50px' }} />
+            <img src={Logo} alt="Logo BB" style={{ width: '270px', borderRadius: '50px' }} />
           </Link>
 
           <button
@@ -38,7 +39,7 @@ function Structure() {
                 <button className="btn btn-sm btn-dark text-white">Prodotti</button>
               </Link>
               <Link to="/NotFound">
-                <button className="btn btn-sm btn-dark text-white">Test</button>
+                <button className="btn btn-sm btn-dark text-white">Chi Siamo</button>
               </Link>
               <input
                 className="form-control form-control-sm border-0 text-white"
@@ -52,7 +53,9 @@ function Structure() {
         </nav>
       </header>
 
-      <Outlet />
+      <main>
+        <Outlet />
+      </main >
 
       <footer className="bg-warning custom-footer px-4 py-4 mt-auto border-top">
         <div className="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
@@ -60,7 +63,7 @@ function Structure() {
 
           <a className="navbar-brand d-flex align-items-center gap-3 text-decoration-none text-dark" href="/">
             <div className="brand-text">
-              <img style={{ width: '80px', borderRadius: '50px' }} src={soloLogo} alt="Logo BB" />
+              <img style={{ width: '200px', borderRadius: '50px' }} src={bella} alt="Logo BB" />
             </div>
           </a>
 
