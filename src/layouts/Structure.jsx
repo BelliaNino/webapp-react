@@ -12,7 +12,7 @@ function Structure() {
         <nav className="navbar navbar-expand-md navbar-light bg-warning px-4">
 
           <Link className="navbar-brand" to="/Homepage">
-            <img src={Logo} alt="Logo BB" style={{ width: '80px', borderRadius: '50px' }} />
+            <img src={Logo} alt="Logo BB" style={{ width: '270px', borderRadius: '50px' }} />
           </Link>
 
           <button
