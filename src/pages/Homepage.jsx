@@ -11,24 +11,30 @@ function Homepage() {
     return (
         <>
             <div className='hero-section'>
-                <img className='slogan' src={slogan} alt="" />
+                <img className='slogan' src={slogan} alt="" style={{ width: '35%', top: '-30px' }} />
             </div>
-            <div>
-                {/* Carosello Bootstrap */}
-                <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
-                    <div className="carousel-inner">
-                        {featuredItems.map((product, index) => (
-                            <div key={product.id} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-                                <img src={product.image_url} className="d-block w-100" alt={product.name} />
+            <div className="featured-section">
+                {/* Sezione Card Featured */}
+                <div className="row justify-content-center g-3 align-items-stretch">
+                    {featuredItems.slice(0, 5).map((product) => (
+                        <div key={product.id} className="col-auto">
+                            <div className="card h-100 d-flex flex-column" style={{ width: '250px' }}>
+                                <img
+                                    src={product.image_url}
+                                    className="card-img-top"
+                                    alt={product.name}
+                                />
+                                <div className="card-body d-flex flex-column">
+                                    <h5 className="card-title">{product.name}</h5>
+                                    <p className="card-text">{product.description}</p>
+                                    <p className="card-text"><strong>€ {product.price}</strong></p>
+                                    <Link to={`/show/${product.id}`} className="btn btn-dark mt-auto">
+                                        Dettagli
+                                    </Link>
+                                </div>
                             </div>
-                        ))}
-                    </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    </button>
+                        </div>
+                    ))}
                 </div>
             </div>
         </>

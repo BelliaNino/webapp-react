@@ -67,14 +67,11 @@ main {
   transform: rotate(-5deg);
 }
 
-.carousel {
-  max-height: 400px;
-  overflow: hidden;
-}
-
-.carousel img {
-  height: 400px;
-  object-fit: cover;
+/* Sezione card featured - homepage */
+.featured-section {
+    margin-top: -430px;
+    position: relative;
+    z-index: 10;
 }
 
 @media (max-width: 768px) {
