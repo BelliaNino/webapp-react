@@ -67,13 +67,23 @@ main {
   transform: rotate(-5deg);
 }
 
+.carousel {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.carousel img {
+  height: 400px;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
   .navbar-brand img {
-    width: 150px !important; 
+    width: 150px !important;
   }
 
   .navbar-brand {
-    margin: 0 auto; 
+    margin: 0 auto;
   }
 }
 
@@ -85,7 +95,7 @@ main {
   padding: 0;
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.03);
 }
 
