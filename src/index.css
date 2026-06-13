@@ -89,6 +89,17 @@ footer {
   overflow: hidden;
 }
 
+.linkbtn {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.card-detail .card {
+  background-image: url('./img/detailcard.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /**/
 /*Show*/
 
