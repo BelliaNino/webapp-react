@@ -12,6 +12,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
+  
 }
 
 .hero-products {
@@ -63,13 +64,14 @@ main {
 .slogan {
   position: absolute;
   width: 45%;
-  left: 260px;
+  left: 200px;
   transform: rotate(-5deg);
 }
 
 /* Sezione card featured - homepage */
 .featured-section {
-    margin-top: -430px;
+    margin-top: -620px;
+    margin-bottom: 60px;
     position: relative;
     z-index: 10;
 }
@@ -102,3 +104,16 @@ main {
   object-fit: cover;
   border-radius: 0.375rem 0.375rem 0 0;
 }
+
+.featured-card-title {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.featured-card {
+    width: 250px;
+}
+

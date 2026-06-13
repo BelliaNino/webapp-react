@@ -19,14 +19,14 @@ function Homepage() {
                 <div className="row justify-content-center g-3 align-items-stretch">
                     {featuredItems.slice(0, 5).map((product) => (
                         <div key={product.id} className="col-auto">
-                            <div className="card h-100 d-flex flex-column" style={{ width: '250px' }}>
+                            <div className="card h-100 d-flex flex-column featured-card">
                                 <img
                                     src={product.image_url}
                                     className="card-img-top"
                                     alt={product.name}
                                 />
                                 <div className="card-body d-flex flex-column">
-                                    <h5 className="card-title">{product.name}</h5>
+                                    <h5 className="card-title featured-card-title">{product.name}</h5>
                                     <p className="card-text">{product.description}</p>
                                     <p className="card-text"><strong>€ {product.price}</strong></p>
                                     <Link to={`/show/${product.id}`} className="btn btn-dark mt-auto">
@@ -37,7 +37,15 @@ function Homepage() {
                         </div>
                     ))}
                 </div>
-            </div>
+                {/* NUOVO: bottone Vedi Tutti */}
+                <div className="text-center mt-4">
+                    <Link to="/Show" className="btn btn-lg" style={{ backgroundColor: '#1a1a1a', color: '#ffffff' }}>
+                        Vedi Tutti i Gusti
+                    </Link>
+                </div>
+
+            
+        </div >
         </>
     )
 };
