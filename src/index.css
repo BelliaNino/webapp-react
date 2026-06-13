@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
-  
+
 }
 
 .hero-products {
@@ -70,10 +70,11 @@ main {
 
 /* Sezione card featured - homepage */
 .featured-section {
-    margin-top: -620px;
-    margin-bottom: 60px;
-    position: relative;
-    z-index: 10;
+position: absolute;
+bottom: 110px;
+left: 0;
+width: 100%;
+z-index: 10;
 }
 
 @media (max-width: 768px) {
@@ -106,14 +107,30 @@ main {
 }
 
 .featured-card-title {
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .featured-card {
-    width: 250px;
+  width: 250px;
 }
 
+@media (max-width: 768px) {
+.hero-section {
+min-height: 60vh;
+    }
+.featured-section {
+position: absolute;
+top: 0;
+bottom: auto;
+left: 0;
+width: 100%;
+    }
+.featured-card {
+width: 100%;
+max-width: none;
+    }
+}

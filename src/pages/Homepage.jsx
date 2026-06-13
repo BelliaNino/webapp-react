@@ -11,14 +11,13 @@ function Homepage() {
     return (
         <>
             <div className='hero-section'>
-                <img className='slogan' src={slogan} alt="" style={{ width: '35%', top: '-30px' }} />
-            </div>
-            <div className="featured-section">
+                <img className='slogan' src={slogan} alt="" style={{ width: '30%', top: '-20px' }} />
+                <div className="featured-section">
                 <h2 className="text-center mb-4 text-white">Gelati in Evidenza</h2>
                 {/* Sezione Card Featured */}
                 <div className="row justify-content-center g-3 align-items-stretch">
                     {featuredItems.slice(0, 5).map((product) => (
-                        <div key={product.id} className="col-auto">
+                        <div key={product.id} className="col-6 col-md-auto">
                             <div className="card h-100 d-flex flex-column featured-card">
                                 <img
                                     src={product.image_url}
@@ -44,6 +43,8 @@ function Homepage() {
                     </Link>
                 </div>
 
+            </div>
+            
             
         </div >
         </>
