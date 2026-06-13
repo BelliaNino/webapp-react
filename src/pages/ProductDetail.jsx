@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { DataContext } from '../context/DataContext';
+import ReviewsList from '../components/ReviewsList';
 
 function ProductDetail() {
     const { id } = useParams(); // Prende l'ID dall'URL
@@ -57,6 +58,7 @@ function ProductDetail() {
                             </div>
                         </div>
                     </div>
+                    <ReviewsList productId={product.id} />
                 </div>
             </div>
         </>
