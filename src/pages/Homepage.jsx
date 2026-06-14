@@ -27,25 +27,41 @@ function Homepage() {
         <>
             <div className='hero-section'>
                 <img className='slogan' src={slogan} alt="" />
-            </div>
 
-            <section className="latest-products">
-                <h2>Ultimi Arrivi</h2>
+                <div className="featured-section fade-in-content">
+                    <h2 className="text-center mb-4 text-white">Gelati in Evidenza</h2>
 
-                {loading && <p>Caricamento...</p>}
-                {error && <p>Errore: {error}</p>}
+                    {loading && <p className="text-center text-white">Caricamento...</p>}
+                    {error && <p className="text-center text-white">Errore: {error}</p>}
 
-                <div className="products-grid">
-                    {featuredProducts.map(product => (
-                        <div key={product.id} className="product-card">
-                            <img src={product.image_url} alt={product.name} />
-                            <h3>{product.name}</h3>
-                            <p>{product.short_description}</p>
-                            <p className="price">€{product.price}</p>
-                        </div>
-                    ))}
+                    <div className="row justify-content-center g-3 align-items-stretch">
+                        {featuredProducts.map((product) => (
+                            <div key={product.id} className="col-6 col-md-auto">
+                                <div className="card h-100 d-flex flex-column featured-card">
+                                    <img
+                                        src={product.image_url}
+                                        className="card-img-top"
+                                        alt={product.name}
+                                    />
+                                    <div className="card-body d-flex flex-column">
+                                        <h5 className="card-title featured-card-title">{product.name}</h5>
+                                        <p className="card-text card-text-clamp">{product.short_description}</p>
+                                        <Link to={`/ProductDetail/${product.id}`} className="btn btn-dark mt-auto">
+                                            Dettagli
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="text-center mt-4">
+                        <Link to="/Show" className="btn btn-lg" style={{ backgroundColor: '#1a1a1a', color: '#ffffff' }}>
+                            Vedi Tutti i Gusti
+                        </Link>
+                    </div>
                 </div>
-            </section>
+            </div>
         </>
     );
 }

@@ -48,8 +48,9 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
+  min-height: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .hero-section {
@@ -58,9 +59,11 @@ footer {
 
 .slogan {
   position: absolute;
-  width: 45%;
-  left: 260px;
-  transform: rotate(-5deg);
+  top: -1rem;
+  left: 30%;
+  width: 26%;
+  transform: translateX(-50%) rotate(-8deg);
+  z-index: 2;
 }
 
 /**/
@@ -161,3 +164,78 @@ footer {
   transform: scale(1.04);
 }
 /**/
+
+/* Sezione prodotti in evidenza - homepage */
+.featured-section {
+  width: 100%;
+  padding: 5rem 1rem 2rem;
+}
+
+.featured-card {
+  width: 250px;
+}
+
+.featured-card-title {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/*
+ /* tre puntini, visualizza altro 
+.card-text-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+*/
+
+@media (max-width: 768px) {
+  .featured-card {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .featured-section {
+    padding-top: 11rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-section {
+    padding-top: 12rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slogan {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .slogan {
+    width: 70%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-content {
+  animation: fadeInUp 0.80s ease-out;
+}
