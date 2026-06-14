@@ -16,6 +16,14 @@ const api = {
         if (data.error) throw new Error(data.error);
         return data.results;
     },
+    
+    // 5 prodotti più recenti
+    async getFeaturedProducts() {
+        const response = await fetch(`${API_BASE_URL}/products/featured`);
+        const data = await response.json();
+        if (data.error) throw new Error(data.error);
+        return data.results;
+    },
 
     async getProductById(id) {
         const response = await fetch(`${API_BASE_URL}/products/${id}`);
