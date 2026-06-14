@@ -59,22 +59,24 @@ main {
 /*manage img*/
 .hero-section {
   position: relative;
+  min-height: auto;
+  padding-top: 20px;
+  padding-bottom: 2rem;
+  background-attachment: scroll;
 }
 
 .slogan {
-  position: absolute;
-  width: 45%;
-  left: 200px;
-  transform: rotate(-5deg);
+  position: static;
+  display: block;
+  width: 40%;
+  margin: 0 auto;
 }
 
 /* Sezione card featured - homepage */
 .featured-section {
-position: absolute;
-bottom: 110px;
-left: 0;
-width: 100%;
-z-index: 10;
+  position: static;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 @media (max-width: 768px) {
@@ -119,18 +121,39 @@ z-index: 10;
 }
 
 @media (max-width: 768px) {
-.hero-section {
-min-height: 60vh;
-    }
-.featured-section {
-position: absolute;
-top: 0;
-bottom: auto;
-left: 0;
-width: 100%;
-    }
-.featured-card {
-width: 100%;
-max-width: none;
-    }
+  .slogan {
+    width: 60%;
+    transform: rotate(-3deg);
+  }
+
+  .featured-card {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-section {
+    min-height: 100vh;
+    padding-top: 0;
+    background-attachment: fixed;
+  }
+
+  .slogan {
+    position: absolute;
+    width: 30%;
+    top: -20px;
+    left: 200px;
+    transform: rotate(-5deg);
+    margin: 0;
+  }
+
+  .featured-section {
+    position: absolute;
+    bottom: 110px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    z-index: 10;
+  }
 }

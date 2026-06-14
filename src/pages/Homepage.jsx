@@ -11,7 +11,7 @@ function Homepage() {
     return (
         <>
             <div className='hero-section'>
-                <img className='slogan' src={slogan} alt="" style={{ width: '30%', top: '-20px' }} />
+                <img className='slogan' src={slogan} alt="" />
                 <div className="featured-section">
                 <h2 className="text-center mb-4 text-white">Gelati in Evidenza</h2>
                 {/* Sezione Card Featured */}
