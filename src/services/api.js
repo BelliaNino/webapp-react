@@ -16,7 +16,7 @@ const api = {
         if (data.error) throw new Error(data.error);
         return data.results;
     },
-    
+
     // 5 prodotti più recenti
     async getFeaturedProducts() {
         const response = await fetch(`${API_BASE_URL}/products/featured`);
@@ -74,15 +74,16 @@ const api = {
 
     async createReview(reviewData) {
         const response = await fetch(`${API_BASE_URL}/reviews`, {
-            method: 'POST',
+            method: "POST",
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json"
             },
-            body: JSON.stringify(reviewData),
+            body: JSON.stringify(reviewData)
         });
-
         const data = await response.json();
-        if (data.error) throw new Error(data.error);
+        if (!response.ok || data.error) {
+            throw new Error(data.error || "Errore durante la creazione della recensione");
+        }
         return data.results;
     }
 };
