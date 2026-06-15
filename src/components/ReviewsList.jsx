@@ -117,7 +117,7 @@ function ReviewsList({ productId }) {
                                 </span>
                             </div>
                             <p className="text-secondary">
-                                {reviews.length} valutazioni globali
+                                {reviews.length} valutazioni
                             </p>
                             {ratingSummary.map(item => (
                                 <button
