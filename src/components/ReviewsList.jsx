@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import api from "../services/api";
+import ReviewForm from "./RewiewForm";
 import { formatDate } from "../utils/fucntions.js";
 import FindItUseful from "./FindItUseful.jsx";
 
@@ -9,6 +10,7 @@ function ReviewsList({ productId }) {
     const [error, setError] = useState(null);
     const [currentPage, setCurrentPage] = useState(0);
     const [ratingFilter, setRatingFilter] = useState(null);
+    const [showReviewForm, setShowReviewForm] = useState(false);
     const reviewsPerPage = 3;
     useEffect(() => {
         const fetchReviews = async () => {
@@ -75,6 +77,11 @@ function ReviewsList({ productId }) {
         setRatingFilter(null);
         setCurrentPage(0);
     };
+    const handleReviewCreated = newReview => {
+        setReviews(previousReviews => [newReview, ...previousReviews]);
+        setCurrentPage(0);
+        setRatingFilter(null);
+    };
     if (loading) {
         return (
             <p className="text-light mt-4">
@@ -94,6 +101,19 @@ function ReviewsList({ productId }) {
             <h2 className="text-light mb-4 fw-bold">
                 Recensioni clienti
             </h2>
+            <button
+                className="btn btn-warning mb-4 fw-bold"
+                onClick={() => setShowReviewForm(true)}
+            >
+                Scrivi una recensione
+            </button>
+
+            <ReviewForm
+                show={showReviewForm}
+                onClose={() => setShowReviewForm(false)}
+                productId={productId}
+                onSuccess={handleReviewCreated}
+            />
             {reviews.length === 0 ? (
                 <p className="text-light">
                     Nessuna recensione disponibile.
