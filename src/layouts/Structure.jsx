@@ -5,6 +5,7 @@ import { Link, Outlet, useNavigate } from 'react-router-dom';
 import Logo from '../img/logo.png'
 import soloLogo from '../img/solologo.png'
 import bella from '../img/bella.png'
+import ChatWidget from "../components/Chat";
 
 function Structure() {
 
@@ -136,6 +137,10 @@ function Structure() {
         </div>
 
       </footer>
+
+      <div className="chat-sticky-wrapper">
+        <ChatWidget />
+      </div>
     </>
   );
 };
