@@ -1,7 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Creepster&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --font-brand: 'Creepster', cursive;
+  --font-heading: 'Bangers', cursive;
+  --font-body: 'Fredoka', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+}
+
+.navbar-brand, .brand-text {
+  font-family: var(--font-brand);
 }
 
 /*Structure*/
