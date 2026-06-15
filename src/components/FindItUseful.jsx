@@ -19,9 +19,9 @@ function FindItUseful({ reviewLikes }) {
     return (
         <div className="d-flex justify-content-start">
             <span className={`like-btn spx-2 ${isLiked ? "btn-liked" : '' }`} onClick={clickHandler}>
-                <i className="bi bi-hand-thumbs-up-fill"></i>
+                <i className="bi bi-hand-thumbs-up-fill px-1"></i>
             </span>
-            <p className="date-text small text-black-50 py-1">{findItUsefulCount} {findItUsefulCount > 1 || findItUsefulCount === 0
+            <p className="date-text small text-black-50 p-1">{findItUsefulCount} {findItUsefulCount > 1 || findItUsefulCount === 0
                 ? "persone l'hanno trovata utile"
                 : "persona l'ha trovata utile"}</p>
         </div>

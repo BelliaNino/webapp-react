@@ -218,13 +218,14 @@ function ReviewsList({ productId }) {
                                             {review.author_name}
                                         </strong>
                                     </p>
-                                    
-                                    <div className="d-flex justify-content-end px-2">
+                                    <div className="d-flex justify-content-between py-2 px-1">
+                                        <FindItUseful reviewLikes={review.find_it_useful}/>
+                                    <div>
                                         <p className="date-text small fst-italic text-black-50 py-1 m">Pubblicato il {formatDate(review.submission_date)}</p>
                                     </div>
-                                    <FindItUseful reviewLikes={review.find_it_useful}/>
+                                    
+                                    </div>
                                 </div>
-
                             </div>
                         ))
                     )}
