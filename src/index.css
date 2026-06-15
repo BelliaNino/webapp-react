@@ -31,9 +31,6 @@ h1, h2, h3 {
   width: 100%;
   height: 104px;
   z-index: 100;
-}
-
-.navbar {
   background-image: url('./img/bgnav.png');
   background-size: cover;
   background-position: center;
@@ -65,26 +62,13 @@ footer {
 /*Homepage*/
 
 .hero-section {
-  background-image: url('./img/jumbotron.png');
+  background-image: url('./img/homebg2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.hero-section {
   position: relative;
-}
-
-.slogan {
-  position: absolute;
-  top: -1rem;
-  left: 30%;
-  width: 26%;
-  transform: translateX(-50%) rotate(-8deg);
-  z-index: 2;
+  padding: 0;
+  margin: 0;
 }
 
 /**/
@@ -183,6 +167,15 @@ footer {
   border-radius: 0.375rem 0.375rem 0 0;
 }
 
+/* Titolo e testo delle card - stile fumetto */
+.card-title {
+  font-family: var(--font-heading);
+}
+
+.card-text {
+  font-weight: 700;
+}
+
 /*btn show and select*/
 .btn-le{
   background-color: rgb(116, 30, 195);
@@ -222,11 +215,11 @@ footer {
 /* Sezione prodotti in evidenza - homepage */
 .featured-section {
   width: 100%;
-  padding: 5rem 1rem 2rem;
+  padding: 3rem 1rem 2rem;
 }
 
 .featured-card {
-  width: 250px;
+  width: 17rem;
 }
 
 .featured-card-title {
@@ -237,45 +230,19 @@ footer {
   text-align: center;
 }
 
-/*
- /* tre puntini, visualizza altro 
 .card-text-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-*/
 
 @media (max-width: 768px) {
   .featured-card {
     width: 100%;
     max-width: none;
-  }
-}
-
-@media (max-width: 1024px) {
-  .featured-section {
-    padding-top: 11rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .featured-section {
-    padding-top: 12rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .slogan {
-    width: 50%;
-  }
-}
-
-@media (max-width: 768px) {
-  .slogan {
-    width: 70%;
   }
 }
 
@@ -292,28 +259,38 @@ footer {
 
 .fade-in-content {
   animation: fadeInUp 0.80s ease-out;
-/*product detail*/
 }
+
+/*product detail*/
+
 
 .rating-star{
   color: #ec307d;
 }
 
-
 .rating-bar{
   background-color: #ec307d;
 }
 
-.main-card {
-  background-image: url('./img/review.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
+.main-card,
 .review-card {
   background-image: url('./img/review.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Hero banner homepage */
+.hero-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-card .card-img-top {
+  height: 290px;
+}
+
+.featured-card .card-img-top {
+  height: 290px;
 }

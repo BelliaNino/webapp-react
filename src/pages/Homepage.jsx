@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import slogan from '../img/slogan.png';
+import heroBanner from '../img/bannerhome.png';
 import api from '../services/api';
+
 
 function Homepage() {
     const [featuredProducts, setFeaturedProducts] = useState([]);
@@ -26,7 +27,7 @@ function Homepage() {
     return (
         <>
             <div className='hero-section'>
-                <img className='slogan' src={slogan} alt="" />
+                <img className='hero-banner' src={heroBanner} alt="iScream banner" />
 
                 <div className="featured-section fade-in-content">
                     <h2 className="text-center mb-4 text-white">Le Novità</h2>
@@ -46,8 +47,8 @@ function Homepage() {
                                     <div className="card-body d-flex flex-column">
                                         <h5 className="card-title featured-card-title">{product.name}</h5>
                                         <p className="card-text card-text-clamp">{product.short_description}</p>
-                                        <Link to={`/ProductDetail/${product.id}`} className="btn btn-dark mt-auto">
-                                            Scopri di più
+                                        <Link to={`/ProductDetail/${product.id}`} className="text-dark text-decoration-none mt-auto align-self-end" aria-label="Dettagli">
+                                            <i className="bi bi-arrow-right-circle-fill fs-2"></i>
                                         </Link>
                                     </div>
                                 </div>
