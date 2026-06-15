@@ -114,8 +114,15 @@ function Show() {
 
                         </div>
                     </div>
+
+                    {displayedItems.length === 0 ?
+                        (<p className='fw-bold fs-5 text-white d-flex mx-4'>⚠️ Nessun elemento trovato. Riprova!</p>) :
+                        (<p className='fw-bold fs-5 text-white d-flex mx-4'>Risultati ({displayedItems.length})</p>)}
+
                     <div className="row d-flex justify-content-center flex-wrap">
+
                         {displayedItems.map(item => (
+
                             <div className="card m-3" style={{ width: "18rem" }} key={item.id}>
                                 <img src={item.image_url} className="card-img-top" alt={item.title} />
                                 <div className="card-body">
@@ -128,7 +135,8 @@ function Show() {
                                         <Link to={`/ProductDetail/${item.id}`}>
                                             <button className="btn btn-dark">Dettagli</button>
                                         </Link>
-                                       {/* <div className="d-flex">
+                                        {/*btn delete and modify*/}
+                                        {/* <div className="d-flex">
                                             <button className="btn btn-dark me-1">
                                                 <i className="bi bi-pencil-fill text-white"></i>
                                             </button>
@@ -141,7 +149,7 @@ function Show() {
                             </div>
                         ))}
                         <div className="card m-3" style={{ width: "18rem" }}>
-                             
+
                             <div className="card-body d-flex justify-content-center align-items-center">
                                 <button className="btn btn-dark" onClick={() => setShowModal(true)}>
                                     Aggiungi Prodotto
