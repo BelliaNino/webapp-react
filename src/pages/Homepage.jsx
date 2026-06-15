@@ -29,8 +29,8 @@ function Homepage() {
             <div className='hero-section'>
                 <img className='hero-banner' src={heroBanner} alt="iScream banner" />
 
-                <div id="featured-products" className="featured-section fade-in-content">
-                    <h2 className="text-center mb-4 text-white">Ultime Proposte</h2>
+                <div className="featured-section fade-in-content">
+                    <h2 className="text-center mb-4 text-white">Le Novità</h2>
 
                     {loading && <p className="text-center text-white">Caricamento...</p>}
                     {error && <p className="text-center text-white">Errore: {error}</p>}
@@ -57,8 +57,8 @@ function Homepage() {
                     </div>
 
                     <div className="text-center mt-4">
-                        <Link to="/Show" className="btn btn-lg" style={{ backgroundColor: '#1a1a1a', color: '#ffffff' }}>
-                            Vedi Tutti i Gusti
+                        <Link to="/Show" className="btn btn-dark btn-lg">
+                            Vai al Menù completo
                         </Link>
                     </div>
                 </div>
