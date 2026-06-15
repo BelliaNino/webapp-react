@@ -107,17 +107,17 @@ function Show() {
                     </div>
                     <div className="row d-flex justify-content-center flex-wrap">
                         {displayedItems.map(item => (
-                            <div className="card m-3" style={{ width: "18rem" }} key={item.id}>
+                            <div className="card product-card m-3" style={{ width: "18rem" }} key={item.id}>
                                 <img src={item.image_url} className="card-img-top" alt={item.title} />
                                 <div className="card-body">
                                     <h5 className="card-title">{item.name}</h5>
-                                    <p className="card-text">{item.short_description}</p>
+
                                     <div className="d-flex align-items-center mb-3 justify-content-between">
                                         <p className="fw-bold mb-0">€ {item.price}</p>
+                                        <Link to={`/ProductDetail/${item.id}`} className="text-dark text-decoration-none" aria-label="Dettagli">
+                                            <i className="bi bi-arrow-right-circle-fill fs-2"></i>
+                                        </Link>
                                     </div>
-                                    <Link to={`/ProductDetail/${item.id}`}>
-                                        <button className="btn btn-dark">Dettagli</button>
-                                    </Link>
                                 </div>
                             </div>
                         ))}

@@ -276,3 +276,7 @@ footer {
   height: auto;
   display: block;
 }
+
+.product-card .card-img-top {
+  height: 290px;
+}
