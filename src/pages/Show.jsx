@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useSearchParams } from 'react-router-dom';
 import { DataContext } from '../context/DataContext';
-import { useContext } from 'react';
-import { useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import api from '../services/api';
 import FormAddCard from '../components/FormAddCard'
 
@@ -22,22 +21,33 @@ function Show() {
     //useState per ricerca
     const [research, setResearch] = useState('')
     const [searchResults, setSearchResults] = useState(null)
+    //useState ricerca per nav
+    const [searchParams] = useSearchParams();
 
-    const handleSearch = () => {
-        console.log('research:', research);
+    //handle searching bar
+    const handleSearch = (term) => {
+        const query = term !== undefined ? term : research;
 
-        if (research.trim() === '') {
+        if (query.trim() === '') {
             setSearchResults(null);
             return;
         }
 
-        api.searchProducts(research)
-            .then(data => {
-                console.log('risultati ricevuti:', data);
-                setSearchResults(data);
-            })
+        api.searchProducts(query)
+            .then(data => setSearchResults(data))
             .catch(err => console.error('errore ricerca:', err));
     }
+
+    //useEffect nav search->product search
+    useEffect(() => {
+        const queryFromUrl = searchParams.get('search');
+        if (queryFromUrl) {
+            setResearch(queryFromUrl);
+            handleSearch(queryFromUrl);
+        }
+    }, [searchParams]);
+
+
 
     const displayedItems = searchResults !== null ? searchResults : items;
 

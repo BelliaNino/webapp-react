@@ -1,11 +1,21 @@
 import React from "react";
-import { Link, Outlet } from 'react-router-dom';
+import { useState } from "react";
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 import Logo from '../img/logo.png'
 import soloLogo from '../img/solologo.png'
 import bella from '../img/bella.png'
 
 function Structure() {
+
+  const navigate = useNavigate();
+  const [navSearch, setNavSearch] = useState('');
+
+  const handleNavbarSearch = () => {
+    if (navSearch.trim() === '') return;
+    navigate(`/Show?search=${encodeURIComponent(navSearch)}`);
+  }
+
   return (
     <>
       <header>
@@ -46,12 +56,17 @@ function Structure() {
                 type="search"
                 placeholder="We all melt down here..."
                 style={{ width: '200px' }}
+                value={navSearch}
+                onChange={e => setNavSearch(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handleNavbarSearch()}
               />
               <button
                 className="btn btn-sm btn-dark text-white fw-bold border-light border-3"
+                onClick={handleNavbarSearch}
               >
                 Cerca
               </button>
+
             </div>
 
           </div>
