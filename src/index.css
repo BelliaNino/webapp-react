@@ -31,9 +31,6 @@ h1, h2, h3 {
   width: 100%;
   height: 104px;
   z-index: 100;
-}
-
-.navbar {
   background-image: url('./img/bgnav.png');
   background-size: cover;
   background-position: center;
@@ -73,12 +70,7 @@ footer {
   padding: 0;
   margin: 0;
 }
-/*
-.slogan {
-  width: 100%;
-  transform: rotate(-8deg);
-}
-*/
+
 /**/
 /*NotFound*/
 
@@ -175,6 +167,15 @@ footer {
   border-radius: 0.375rem 0.375rem 0 0;
 }
 
+/* Titolo e testo delle card - stile fumetto */
+.card-title {
+  font-family: var(--font-heading);
+}
+
+.card-text {
+  font-weight: 700;
+}
+
 /*btn show and select*/
 .btn-le{
   background-color: rgb(116, 30, 195);
@@ -222,8 +223,6 @@ footer {
   text-align: center;
 }
 
-/*
- /* tre puntini, visualizza altro 
 .card-text-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -231,7 +230,6 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-*/
 
 @media (max-width: 768px) {
   .featured-card {
@@ -240,30 +238,6 @@ footer {
   }
 }
 
-@media (max-width: 1024px) {
-  .featured-section {
-    padding-top: 11rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .featured-section {
-    padding-top: 12rem;
-  }
-}
-/*
-@media (max-width: 1024px) {
-  .slogan {
-    width: 50%;
-  }
-}
-
-@media (max-width: 768px) {
-  .slogan {
-    width: 70%;
-  }
-}
-*/
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -288,13 +262,7 @@ footer {
   background-color: #ec307d;
 }
 
-.main-card {
-  background-image: url('./img/review.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
+.main-card,
 .review-card {
   background-image: url('./img/review.png');
   background-size: cover;
