@@ -89,7 +89,7 @@ function Show() {
                                     style={{ minWidth: '200px' }}
                                     value={research}
                                     onChange={e => setResearch(e.target.value)}
-                                    onKeyDown={e => e.key === 'Enter' && handleSearch}
+                                    onKeyDown={e => e.key === 'Enter' && handleSearch()}
                                 />
                             </div>
                         </div>
