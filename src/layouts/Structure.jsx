@@ -1,5 +1,6 @@
 import React from "react";
-import { useState } from "react";
+import { DataContext } from '../context/DataContext';
+import { useState, useContext } from "react";
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 import Logo from '../img/logo.png'
@@ -11,6 +12,7 @@ function Structure() {
 
   const navigate = useNavigate();
   const [navSearch, setNavSearch] = useState('');
+  const { wishlistItems } = useContext(DataContext);
 
   const handleNavbarSearch = () => {
     if (navSearch.trim() === '') return;
@@ -18,11 +20,11 @@ function Structure() {
   }
 
   const closeMenu = () => {
-  const collapse = document.getElementById('navMenu');
-  if (collapse && collapse.classList.contains('show')) {
-    collapse.classList.remove('show');
-  }
-};
+    const collapse = document.getElementById('navMenu');
+    if (collapse && collapse.classList.contains('show')) {
+      collapse.classList.remove('show');
+    }
+  };
 
   return (
     <>
@@ -57,7 +59,14 @@ function Structure() {
                 <Link to="/WhoWeAre" className="btn btn-sm btn-dark text-white" onClick={closeMenu}>Chi Siamo</Link>
               </li>
               <li className="nav-item">
-                <Link to="/Favorites" className="btn btn-sm btn-dark text-white" onClick={closeMenu}><i class="bi bi-heart-fill"></i></Link>
+                <Link to="/Favorites" className="btn btn-sm btn-dark text-white position-relative" onClick={closeMenu}>
+                  <i className="bi bi-heart-fill"></i>
+                  {wishlistItems.length > 0 && (
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      {wishlistItems.length}
+                    </span>
+                  )}
+                </Link>
               </li>
               <li className="nav-item d-flex gap-2">
                 <input
