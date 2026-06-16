@@ -19,26 +19,20 @@ function AboutUs() {
                     <div className="card bg-dark text-light border-warning mb-5 p-4">
                         <div className="card-body">
                             <h2 className="card-title text-warning mb-3">La Nostra Storia</h2>
-                            <p className="card-text text-white fs-5 fw-light lh-lg m-0">
-                                Tutto è iniziato in una notte tempestosa al 29 di Neibolt Street, Derry. O almeno così raccontiamo ai clienti. <br />
-                                La verità è che nessuno ricorda davvero come sia nata iScream: alcuni dicono che sia stata l'idea di un gelataio troppo appassionato di film horror, altri giurano che sia comparsa dal nulla dopo un esperimento andato terribilmente... bene.
-                                <br />
-                                <br />
-                                La leggenda narra che il fondatore stesse cercando di creare il gusto perfetto per una maratona di film dell'orrore. Dopo ore di tentativi, <strong>un fulmine colpì il laboratorio</strong>, le luci si spensero e dal congelatore arrivò un urlo inquietante:
-                                <br />
-                                <br />
-                                "I SCREAM!"
-                                <br />
-                                <br />
-                                Quando la corrente tornò, sul bancone c'era una vaschetta di gelato mai vista prima. Nessuno sa cosa contenesse, ma era talmente buona che i presenti decisero di ignorare il fatto che la vaschetta sembrasse fissarli.
-                                Da quel giorno nacque iScream, la prima gelateria dove <strong>i brividi sono inclusi nel prezzo</strong> e i gusti hanno nomi che farebbero sorridere anche un fantasma. <br />
-                                Qui non troverai mostri sotto il letto, ma potresti incontrare un <strong>sorbetto vendicativo</strong>, una stracciatella maledetta o un cono così buono da far urlare di gioia.
-                                <br />
-                                <br />
-                                Per fortuna, finora <strong>nessun cliente è scomparso</strong>. Almeno, nessuno che abbia lasciato una recensione.
-                                <br />
-                                <br />
-                                iScream: dove l'unica cosa davvero spaventosa è <strong>finire il gelato troppo in fretta</strong>.
+                            <p className="card-text text-white fst-italic small mb-3">
+                                Nessuno ricorda davvero come sia nata iScream. E forse è meglio così.
+                            </p>
+                            <p className="card-text text-white lh-base mb-3">
+                                La leggenda vuole che il fondatore stesse sperimentando il gusto perfetto per una maratona horror, quando <strong>un fulmine colpì il laboratorio</strong>. Le luci si spensero. Dal congelatore arrivò un urlo: <strong>"I SCREAM!"</strong>
+                            </p>
+                            <p className="card-text text-white lh-base mb-3">
+                                Quando la corrente tornò, sul bancone c'era una vaschetta mai vista prima. Era deliziosa. <strong>Sembrava fissarci.</strong> Decidemmo di ignorare il secondo dettaglio.
+                            </p>
+                            <p className="card-text text-white lh-base mb-3">
+                                Da quel giorno, iScream è la gelateria dove i <strong>brividi sono inclusi nel prezzo</strong>: troverai sorbetti vendicativi, stracciatelle maledette e coni così buoni da far urlare di gioia.
+                            </p>
+                            <p className="card-text text-white fst-italic small mt-3">
+                                Finora <strong>nessun cliente è scomparso</strong>. Almeno, nessuno che abbia lasciato una recensione. ★★★★★
                             </p>
                         </div>
                     </div>
