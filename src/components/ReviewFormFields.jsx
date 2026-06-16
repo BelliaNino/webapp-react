@@ -2,7 +2,7 @@ function ReviewFormFields({ formData, setFormData }) {
     return (
         <>
             <div className="mb-3">
-                <label className="form-label">
+                <label className="form-label fw-bold">
                     Titolo
                 </label>
                 <input
@@ -19,7 +19,7 @@ function ReviewFormFields({ formData, setFormData }) {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">
+                <label className="form-label fw-bold">
                     Recensione
                 </label>
                 <textarea
@@ -36,7 +36,7 @@ function ReviewFormFields({ formData, setFormData }) {
                 ></textarea>
             </div>
             <div className="mb-3">
-                <label className="form-label">
+                <label className="form-label fw-bold">
                     Valutazione
                 </label>
                 <select
@@ -58,7 +58,7 @@ function ReviewFormFields({ formData, setFormData }) {
                 </select>
             </div>
             <div className="mb-3">
-                <label className="form-label">
+                <label className="form-label fw-bold">
                     Il tuo nome
                 </label>
                 <input

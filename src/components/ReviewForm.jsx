@@ -55,9 +55,9 @@ function ReviewForm({ show, onClose, productId, onSuccess }) {
             <div className="modal-dialog modal-dialog-centered">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title">
+                        <h3 className="modal-title">
                             Scrivi una recensione
-                        </h5>
+                        </h3>
 
                         <button type="button" className="btn-close" onClick={onClose}>
                         </button>

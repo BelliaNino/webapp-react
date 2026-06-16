@@ -17,6 +17,13 @@ function Structure() {
     navigate(`/Show?search=${encodeURIComponent(navSearch)}`);
   }
 
+  const closeMenu = () => {
+  const collapse = document.getElementById('navMenu');
+  if (collapse && collapse.classList.contains('show')) {
+    collapse.classList.remove('show');
+  }
+};
+
   return (
     <>
       <header>
@@ -38,39 +45,37 @@ function Structure() {
             <span className="navbar-toggler-icon" />
           </button>
 
-          {/* Contenuto collassabile */}
           <div className="collapse navbar-collapse" id="navMenu">
-
-            <div className="me-auto" />
-            <div className="d-flex align-items-center gap-2">
-              <Link to="/Homepage">
-                <button className="btn btn-sm btn-dark text-white">Home</button>
-              </Link>
-              <Link to="/Show">
-                <button className="btn btn-sm btn-dark text-white">Menù</button>
-              </Link>
-              <Link to="/WhoWeAre">
-                <button className="btn btn-sm btn-dark text-white">Chi Siamo</button>
-              </Link>
-              <input
-                className="form-control form-control-sm border-0 text-dark"
-                type="search"
-                placeholder="We all melt down here..."
-                style={{ width: '200px' }}
-                value={navSearch}
-                onChange={e => setNavSearch(e.target.value)}
-                onKeyDown={e => e.key === 'Enter' && handleNavbarSearch()}
-              />
-              <button
-                className="btn btn-sm btn-dark text-white fw-bold border-light border-3"
-                onClick={handleNavbarSearch}
-              >
-                Cerca
-              </button>
-
-            </div>
-
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3">
+              <li className="nav-item">
+                <Link to="/Homepage" className="btn btn-sm btn-dark text-white" onClick={closeMenu}>Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Show" className="btn btn-sm btn-dark text-white" onClick={closeMenu}>Menù</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/WhoWeAre" className="btn btn-sm btn-dark text-white" onClick={closeMenu}>Chi Siamo</Link>
+              </li>
+              <li className="nav-item d-flex gap-2">
+                <input
+                  className="form-control form-control-sm border-0 text-dark"
+                  type="search"
+                  placeholder="We all melt down here..."
+                  style={{ width: '200px' }}
+                  value={navSearch}
+                  onChange={e => setNavSearch(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && handleNavbarSearch()}
+                />
+                <button
+                  className="btn btn-sm btn-dark text-white fw-bold border-light border-3"
+                  onClick={handleNavbarSearch}
+                >
+                  Cerca
+                </button>
+              </li>
+            </ul>
           </div>
+
         </nav>
       </header>
 
