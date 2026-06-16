@@ -342,3 +342,73 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* Newsletter Modal */
+.newsletter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.newsletter-modal {
+  background-color: #ffc107;;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.newsletter-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+.newsletter-modal input {
+  background-color: #fff8e1;
+  border: 1px solid #1a1a1a;
+}
+
+@keyframes modalPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.newsletter-overlay {
+  animation: overlayFadeIn 0.3s ease-out;
+}
+
+.newsletter-modal {
+  animation: modalPopIn 0.35s ease-out;
+}
+.newsletter-mascot {
+  display: block;
+  width: 160px;
+  margin: -2rem auto 0.5rem;
+}

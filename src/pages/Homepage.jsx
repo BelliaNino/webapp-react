@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import heroBanner from '../img/bannerhome.png';
 import api from '../services/api';
 import ProductCardHome from '../components/ProductCardHome';
-
+import NewsletterModal from '../components/NewsletterModal';
 
 function Homepage() {
     const [featuredProducts, setFeaturedProducts] = useState([]);
@@ -27,6 +27,7 @@ function Homepage() {
 
     return (
         <>
+            <NewsletterModal />
             <section className="hero-section">
                 <img className='hero-banner' src={heroBanner} alt="iScream banner" />
 
